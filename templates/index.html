@@ -5,137 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
     <title>sigma lang</title>
-    <style>
-        :root {
-            --primary: #b5b7ff;
-            --primary-dark: #9b97ff;
-            --secondary: #ec4899;
-            --background: linear-gradient(to bottom, #f8e1ee, #d4e5f7);
-            --text: #1f2937;
-        }
-
-        body {
-            font-family: source code pro, monospace;
-            line-height: 1.5;
-            color: var(--text);
-            background: var(--background);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 6rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('/static/assets/grid.svg');
-            opacity: 0.1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2.5rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            font-size: 1.125rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.1);
-            color: white;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.125rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="hero">
-            <h1>sigma lang documentation</h1>
+            <h1>sigma lang</h1>
+            <pre><code>curl -sSL https://raw.githubusercontent.com/dimini171/sigma/v2/install.sh | bash && sigma</code></pre>
             <div class="cta-buttons">
-                <a href="/quickstart" class="btn btn-secondary" style="text-decoration: none;">Quickstart Guide</a>
+                <a href="/" class="btn btn-secondary" style="text-decoration: none;">Home</a>
                 <a href="/syntax" class="btn btn-secondary" style="text-decoration: none;">Documentation</a>
                 <a href="https://github.com/dimini171/sigma" class="btn btn-secondary" style="text-decoration: none;">View on GitHub</a>
             </div>
