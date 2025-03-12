@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>dimini.</title>
-        <link rel="stylesheet" href="/static/styles.css">
-    </head>
-    <body>
-        <img src="/static/assets/dimini.jpg" alt="dimini171" style="width: 100%; height: 100%;">
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>sigma lang</title>
+    <style>
+        body {
+            font-family: 'source code pro', monospace;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(to bottom, #f8e1ee, #d4e5f7);
+            line-height: 1.6;
+        }
+        h1 {
+            color: #dd7da5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            border-bottom: 3px solid #9bc1ed;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #c76a95;
+            border-left: 5px solid #9bc1ed;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f9cd1;
+        }
+        a {
+            color: #dd7da5;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #9bc1ed;
+            text-decoration: underline;
+        }
+        code {
+            background-color: #333;
+            color: #dd7da5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #333;
+            color: #dd7da5;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border-left: 4px solid #9bc1ed;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li:before {
+            content: "✨ ";
+            color: #dd7da5;
+        }
+        strong {
+            color: #c76a95;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>sigma lang</h1>
+    <p>Rewrite of the <a href="https://github.com/dimini171/sigma/tree/v1">original</a>, now more like an actual language than a preprocessor. An automated installer will be added soon.</p>
+    <p>You are recommended to use Python version 3.13 or higher. <strong>The minimum version is Python 3.10</strong></p>
+
+    <h2>Quickstart</h2>
+    <p>Run the automatic installer:</p>
+    <pre><code>curl -sSL https://raw.githubusercontent.com/dimini171/sigma/v2/install.sh | bash && sigma</code></pre>
+    <p>Input your password when prompted to. Example sigma scripts can be found under the latest release.</p>
+    <p><strong>NOTE:</strong> Python is not required to be installed.</p>
+
+    <h3>Tested Hardware:</h3>
+    <ul>
+        <li>M series (arm64) MacBooks</li>
+        <li>aarch64/x86_64 Linux distros</li>
+    </ul>
+
+    <h3>Tested Operating Systems:</h3>
+    <ul>
+        <li>macOS Sequoia 15.*</li>
+        <li>Fedora Asahi Remix (aarch64) 49</li>
+        <li>Debian Trixie (x86_64)</li>
+    </ul>
+
+    <h2>What is this?</h2>
+    <p>Sigma lang was made for our final year computing coursework. It attempts to be very simple to understand and learn, especially for absolute beginners and people who want to pick up programming, but find it too confusing or difficult.</p>
+
+    <h2>Syntax</h2>
+    <p>Head over to <a href="https://github.com/dimini171/sigma/blob/v2/SYNTAX.md">syntax.md</a> to read more.</p>
+
+    <h2>Progress on Stuff</h2>
+    <h3>Hotfixes</h3>
+    <p>Pass</p>
+
+    <h3>In Progress</h3>
+    <p>Nothing for now</p>
+
+    <h3>Roadmap</h3>
+    <ul>
+        <li>Arrays</li>
+        <li>Iterables</li>
+        <li>Functions</li>
+    </ul>
+
+    <h2>Contributing</h2>
+    <p>Read <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+
+    <h2>Building</h2>
+    <p>Read <a href="BUILDING.md">BUILDING.md</a></p>
+</body>
 </html>

@@ -1,10 +1,167 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>sigma lang docs</title>
-        <link rel="stylesheet" href="/static/styles.css">
-    </head>
-    <body>
-        <img src="/static/assets/dimini.jpg" alt="sigma lang" style="width: 100%; height: 100%;">
-    </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>sigma lang</title>
+    <style>
+        :root {
+            --primary: #b5b7ff;
+            --primary-dark: #9b97ff;
+            --secondary: #ec4899;
+            --background: #f9fafb;
+            --text: #1f2937;
+        }
+
+        body {
+            font-family: source code pro, monospace;
+            line-height: 1.5;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/static/assets/grid.svg');
+            opacity: 0.1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 1.125rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>sigma lang documentation</h1>
+            <div class="cta-buttons">
+                <a href="/quickstart" class="btn btn-primary" style="text-decoration: none;">Quickstart Guide</a>
+                <a href="https://github.com/dimini171/sigma" class="btn btn-secondary" style="text-decoration: none;">View on GitHub</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>what is sigma lang?</h2>
+        <p>sigma lang was made for our final year computing coursework.
+            <br/>
+            it attempts to be a very simple to understand and learn, especially for absolute beginners and people who want to pick up programming, but find it too confusing or difficult.
+        </p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>easy to learn</h3>
+                <p>simple syntax and beginner-friendly, mimicking natural language.</p>
+            </div>
+            <div class="feature-card">
+                <h3>documentation</h3>
+                <p>comprehensive guides and examples to help you get started quickly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>open source</h3>
+                <p>public repository on github, contributions welcome</p>
+            </div>
+        </div>
+    </div>
+</body>
+
