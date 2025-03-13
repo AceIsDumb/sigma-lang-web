@@ -19,81 +19,81 @@
         </div>
     </header>
 
-    <h1>Sigma Language Syntax</h1>
+    <h1>sigma language syntax</h1>
     
-    <h2>File Structure</h2>
-    <p>Sigma files use the <code class="inline">.sigma</code> extension or include <code class="inline">!&gt;sigma</code> as the first line.</p>
+    <h2>file structure</h2>
+    <p>sigma files use the <code class="inline">.sigma</code> extension or include <code class="inline">!&gt;sigma</code> as the first line.</p>
 
-    <h2>Data Types</h2>
+    <h2>data types</h2>
     <table>
         <tr>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Example</th>
+            <th>type</th>
+            <th>description</th>
+            <th>example</th>
         </tr>
         <tr>
             <td>integer</td>
-            <td>Whole numbers</td>
+            <td>whole numbers</td>
             <td><code class="inline">1</code>, <code class="inline">42</code></td>
         </tr>
         <tr>
             <td>float</td>
-            <td>Decimal numbers</td>
+            <td>decimal numbers</td>
             <td><code class="inline">3.14</code>, <code class="inline">2.71</code></td>
         </tr>
         <tr>
             <td>boolean</td>
-            <td>True or false values</td>
+            <td>true or false values</td>
             <td><code class="inline">true</code>, <code class="inline">false</code></td>
         </tr>
         <tr>
             <td>nonetype</td>
-            <td>Represents null/none value</td>
+            <td>represents null/none value</td>
             <td><code class="inline">none</code>, <code class="inline">nothing</code></td>
         </tr>
         <tr>
             <td>string</td>
-            <td>Text enclosed in double quotes</td>
+            <td>text enclosed in double quotes</td>
             <td><code class="inline">"hello, world!"</code></td>
         </tr>
     </table>
 
     <div class="note">
-        <strong>Note:</strong> Strings can include variables by using <code class="inline">${variableName}</code> syntax.<br>
+        <strong>Note:</strong> strings can include variables by using <code class="inline">${variableName}</code> syntax.<br>
         Example: <code class="inline">print "the count is ${count}"</code>
     </div>
 
-    <h2>Variable Assignment</h2>
-    <p>Variables are stored as a dictionary (globals.py > variables)</p>
+    <h2>variable assignment</h2>
+    <p>variables are stored as a dictionary (globals.py > variables)</p>
     
-    <h3>Assigning variables:</h3>
+    <h3>assigning variables:</h3>
     <pre><code>let &lt;type&gt; var &lt;name&gt; be &lt;expression&gt;
 let &lt;type&gt; const &lt;name&gt; be &lt;expression&gt;</code></pre>
     
-    <h3>Reassigning variables:</h3>
+    <h3>reassigning variables:</h3>
     <pre><code>change &lt;name&gt; to &lt;value&gt;</code></pre>
     
-    <h3>Example:</h3>
+    <h3>example:</h3>
     <div class="comparison">
         <div>
-            <strong>Sigma:</strong>
+            <strong>sigma:</strong>
             <pre><code>let int var count be 5
 let string const message be "hello, world!"
 change count to 10</code></pre>
         </div>
         <div>
-            <strong>Python equivalent:</strong>
+            <strong>python equivalent:</strong>
             <pre><code>count: int = 5
 message: str = "hello, world!"
 count = 10</code></pre>
         </div>
     </div>
 
-    <h2>Comments</h2>
-    <p>Comments are surrounded by <code class="inline">&lt;--</code> and <code class="inline">--&gt;</code></p>
+    <h2>comments</h2>
+    <p>comments are surrounded by <code class="inline">&lt;--</code> and <code class="inline">--&gt;</code></p>
     <pre><code>&lt;-- This is a comment --&gt;</code></pre>
 
-    <h2>Conditionals</h2>
+    <h2>conditionals</h2>
     <pre><code>if (&lt;statement&gt;) then do
     expression
     expression
@@ -103,10 +103,10 @@ else do
     expression
 fi</code></pre>
     
-    <h3>Example:</h3>
+    <h3>example:</h3>
     <div class="comparison">
         <div>
-            <strong>Sigma:</strong>
+            <strong>sigma:</strong>
             <pre><code>if (x is greater than 10) then do
     print line "x is large"
 elif (x is equal to 10) then do
@@ -116,7 +116,7 @@ else do
 fi</code></pre>
         </div>
         <div>
-            <strong>Python equivalent:</strong>
+            <strong>python equivalent:</strong>
             <pre><code>if x > 10:
     print("x is large")
 elif x == 10:
@@ -126,106 +126,106 @@ else:
         </div>
     </div>
 
-    <h2>Loops</h2>
-    <h3>While Loop:</h3>
+    <h2>loops</h2>
+    <h3>while Loop:</h3>
     <pre><code>while (&lt;condition&gt;) do
     expression
 elihw</code></pre>
     
-    <h3>Example:</h3>
+    <h3>example:</h3>
     <div class="comparison">
         <div>
-            <strong>Sigma:</strong>
+            <strong>sigma:</strong>
             <pre><code>while (count is greater than 0) do
     print "count: ${count}"
     change count to (count minus 1)
 elihw</code></pre>
         </div>
         <div>
-            <strong>Python equivalent:</strong>
+            <strong>python equivalent:</strong>
             <pre><code>while count > 0:
     print(f"count {count}")
     count -= 1</code></pre>
         </div>
     </div>
 
-    <h2>Logical Operations</h2>
-    <p>All logic should be between brackets</p>
+    <h2>logical operations</h2>
+    <p>all logic should be between brackets</p>
     <table>
         <tr>
-            <th>Operation</th>
-            <th>Sigma Syntax</th>
-            <th>Equivalent Operator</th>
+            <th>operation</th>
+            <th>sigma syntax</th>
+            <th>equivalent operator</th>
         </tr>
         <tr>
-            <td>Greater than</td>
+            <td>greater than</td>
             <td><code class="inline">&lt;statement&gt; is greater than &lt;statement&gt;</code></td>
             <td><code class="inline">&gt;</code></td>
         </tr>
         <tr>
-            <td>Less than</td>
+            <td>less than</td>
             <td><code class="inline">&lt;statement&gt; is less than &lt;statement&gt;</code></td>
             <td><code class="inline">&lt;</code></td>
         </tr>
         <tr>
-            <td>Greater than or equal to</td>
+            <td>greater than or equal to</td>
             <td><code class="inline">&lt;statement&gt; is greater than or equal to &lt;statement&gt;</code></td>
             <td><code class="inline">&gt;=</code></td>
         </tr>
         <tr>
-            <td>Less than or equal to</td>
+            <td>less than or equal to</td>
             <td><code class="inline">&lt;statement&gt; is less than or equal to &lt;statement&gt;</code></td>
             <td><code class="inline">&lt;=</code></td>
         </tr>
         <tr>
-            <td>Equals</td>
+            <td>equals</td>
             <td><code class="inline">&lt;statement&gt; equals &lt;statement&gt;</code></td>
             <td><code class="inline">==</code></td>
         </tr>
         <tr>
-            <td>Not equals</td>
+            <td>not equals</td>
             <td><code class="inline">&lt;statement&gt; is not &lt;statement&gt;</code></td>
             <td><code class="inline">!=</code></td>
         </tr>
     </table>
 
-    <h3>Logical Operators:</h3>
+    <h3>logical operators:</h3>
     <ul>
-        <li>And: <code class="inline">and</code></li>
-        <li>Or: <code class="inline">or</code></li>
-        <li>Not: <code class="inline">not</code></li>
+        <li>and: <code class="inline">and</code></li>
+        <li>or: <code class="inline">or</code></li>
+        <li>not: <code class="inline">not</code></li>
     </ul>
 
-    <h3>Example:</h3>
+    <h3>example:</h3>
     <div class="comparison">
         <div>
-            <strong>Sigma:</strong>
+            <strong>sigma:</strong>
             <pre><code>if ((x is greater than 5) and (y is less than 10)) then do
     print "x and y are in range"
 fi</code></pre>
         </div>
         <div>
-            <strong>Python equivalent:</strong>
+            <strong>python equivalent:</strong>
             <pre><code>if x > 5 and y < 10:
     print("x and y are in range")</code></pre>
         </div>
     </div>
 
-    <h2>Printing</h2>
+    <h2>printing</h2>
     <div class="comparison">
         <div>
-            <strong>Sigma:</strong>
+            <strong>sigma:</strong>
             <pre><code>print "print without newline"
 print line "print with newline"</code></pre>
         </div>
         <div>
-            <strong>Python equivalent:</strong>
+            <strong>python equivalent:</strong>
             <pre><code>print("print without newline", end="")
 print("print with newline")</code></pre>
         </div>
     </div>
 
-    <h2>Receiving Input</h2>
+    <h2>receiving input</h2>
     <pre><code>receive to variable</code></pre>
     
     <h3>Example:</h3>
@@ -233,14 +233,14 @@ print("print with newline")</code></pre>
 receive to username
 print "welcome, ${username}"</code></pre>
 
-    <h2>Exception Handling</h2>
+    <h2>exception handling</h2>
     <pre><code>try do
     expression
 except do
     expression
 yrt</code></pre>
 
-    <h2>Coming Soon</h2>
+    <h2>coming soon</h2>
     <h3>Functions</h3>
     <pre><code>function foo (&lt;param&gt; as &lt;type&gt;) as
     expression
